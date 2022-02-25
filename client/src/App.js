@@ -3,7 +3,7 @@ import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 import  ApolloClient from 'apollo-boost';
 import { ApolloProvider } from '@apollo/react-hooks';
 
-// import { setContext } from '@apollo/client/link/context';
+//import { setContext } from '@apollo/client/link/context';
 
 import Home from './pages/Home';
 import Detail from './pages/Detail';
@@ -26,7 +26,6 @@ const client = new ApolloClient({
     const token = localStorage.getItem('id_token');
     operation.setContext({
       headers: {
-        ...headers,
         authorization: token ? `Bearer ${token}` : '',
       }
     })

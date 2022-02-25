@@ -9,7 +9,7 @@ import { QUERY_CATEGORIES } from '../../utils/queries';
 import { idbPromise } from '../../utils/helpers';
 import { useDispatch, useSelector } from  'react-redux';
 
-function CategoryMenu({}) {
+function CategoryMenu() {
   // const [state, dispatch] = useStoreContext();
 
   const state = useSelector((state) => {
@@ -17,7 +17,7 @@ function CategoryMenu({}) {
   });
 
   const dispatch = useDispatch();
-  
+
   const { categories } = state;
 
   const { loading, data: categoryData } = useQuery(QUERY_CATEGORIES);
